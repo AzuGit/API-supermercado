@@ -1,0 +1,9 @@
+package com.azudev.API_supermercado.Repository;
+
+import com.azudev.API_supermercado.Model.Producto;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductoRepository extends CrudRepository<Producto, Long> {
+}

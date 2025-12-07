@@ -18,11 +18,14 @@ public class DetalleVenta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name="venta_id")
     private Venta venta;
 
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name="producto_id")
     private Producto producto;
+
 
     @Column(name = "cantidad_producto")
     private Integer cantProducto;

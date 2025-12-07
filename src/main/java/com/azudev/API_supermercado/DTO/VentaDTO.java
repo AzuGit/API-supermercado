@@ -1,18 +1,17 @@
 package com.azudev.API_supermercado.DTO;
 
 import com.azudev.API_supermercado.Model.Sucursal;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class VentaDTO {
 
     //datos venta
@@ -24,7 +23,7 @@ public class VentaDTO {
     private Long idSucursal;
 
     //lista de detalles
-    private List<DetalleVentaDTO> detalle;
+    private List<DetalleVentaDTO> detalle = new ArrayList<>();
 
     //total de la venta
     private Double total;

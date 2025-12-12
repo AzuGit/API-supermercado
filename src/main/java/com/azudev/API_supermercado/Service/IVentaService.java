@@ -11,7 +11,7 @@ public interface IVentaService {
 
     List<VentaDTO> findAll();
 
-    Optional<VentaDTO> findById(Long id);
+    VentaDTO save(VentaDTO ventaDTO);
 
     VentaDTO update(Long id, VentaDTO ventaDTO);
 
